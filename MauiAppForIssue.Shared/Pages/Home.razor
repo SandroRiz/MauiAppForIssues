@@ -1,0 +1,18 @@
+﻿@page "/"
+@using MauiAppForIssue.Shared.Services
+@inject IFormFactor FormFactor
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+
+<p>Img Link: <a href="https://dotnet.microsoft.com/en-us/apps/maui" target="_blank"><img src="_content/MauiAppForIssue.Shared/logosr.png" /></a></p>
+<p>Go to Microsoft <a href="https://dotnet.microsoft.com/en-us/apps/maui" target="_blank">MAUI website...</a></p>
+
+Welcome to your new app running on <em>@factor</em> using <em>@platform</em>.
+
+@code {
+    private string factor => FormFactor.GetFormFactor();
+    private string platform => FormFactor.GetPlatform();
+}
